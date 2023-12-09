@@ -4,6 +4,8 @@ jobs:
   run-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Get-Code
+        run: actions/checkout@v3
       - name: List-Files
         run: ls -l
       - name: Check-Docker
