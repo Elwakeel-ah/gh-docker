@@ -10,6 +10,14 @@ jobs:
         run: ls -l
       - name: Check-Docker
         run: docker build .
+      - name: Create-Docker-Image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: Dockerfile
+          push: false
+        container:
+        image: IMAGE_NAME:built
       - name: Checkout-Code
         uses: actions/checkout@v3
       - name: Start-Server
