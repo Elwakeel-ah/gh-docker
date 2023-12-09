@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout-Code
-        run: actions/Checkout@v3
+        run: actions/checkout@v3
       - name: Start-Server
         run: npm start
